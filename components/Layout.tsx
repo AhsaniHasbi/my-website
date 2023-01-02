@@ -30,11 +30,11 @@ export default function Layout({ children } : PropsWithChildren) {
           transition={{ duration: 0.5, delay: 2, ease: 'easeInOut' }} 
           className='static md:fixed left-0 bottom-0 z-0 flex flex-row md:flex-col items-center justify-center space-x-6 md:space-x-0 md:pl-12 text-blue text-md md:text-lg'
         >
-          <a href='https://github.com/AhsaniHasbi' target='_blank' className='inline-block mb-4'><GitHubIcon sx={{fontSize: 25}} /></a>
-          <a href='https://twitter.com/HasbiAhsani' target='_blank' className='inline-block mb-4'><TwitterIcon sx={{fontSize: 25}} /></a>
-          <a href='https://www.instagram.com/hasbi_ahsani' target='_blank' className='inline-block mb-4'><InstagramIcon sx={{fontSize: 25}} /></a>
-          <a href='https://www.linkedin.com/in/muhammad-hasbi-ahsani-aba53b246/' target='_blank' className='inline-block mb-4 md:mb-0'><LinkedInIcon sx={{fontSize: 25}} /></a>
-          <a href='mailto:hasbiahsani92@gmail.com' target='_blank' className='md:hidden inline-block mb-4'><EmailIcon sx={{fontSize: 25}} /></a>
+          <a href='https://github.com/AhsaniHasbi' target='_blank' ref='noreferrer' className='inline-block mb-4'><GitHubIcon sx={{fontSize: 25}} /></a>
+          <a href='https://twitter.com/HasbiAhsani' target='_blank' ref='noreferrer' className='inline-block mb-4'><TwitterIcon sx={{fontSize: 25}} /></a>
+          <a href='https://www.instagram.com/hasbi_ahsani' target='_blank' ref='noreferrer' className='inline-block mb-4'><InstagramIcon sx={{fontSize: 25}} /></a>
+          <a href='https://www.linkedin.com/in/muhammad-hasbi-ahsani-aba53b246/' target='_blank' ref='noreferrer' className='inline-block mb-4 md:mb-0'><LinkedInIcon sx={{fontSize: 25}} /></a>
+          <a href='mailto:hasbiahsani92@gmail.com' className='md:hidden inline-block mb-4'><EmailIcon sx={{fontSize: 25}} /></a>
           <div className='hidden md:block border-blue border-r-2 h-[14vh] mt-8'></div>
         </motion.div>
 
