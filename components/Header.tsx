@@ -71,7 +71,7 @@ export default function Header() {
           text-sm
         `}
       >
-        <Link href={'#about'} passHref>
+        <Link href={'/'} passHref>
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

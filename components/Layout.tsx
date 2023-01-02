@@ -7,6 +7,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import Header from './Header';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Layout({ children } : PropsWithChildren) {
   return (
@@ -30,11 +31,23 @@ export default function Layout({ children } : PropsWithChildren) {
           transition={{ duration: 0.5, delay: 2, ease: 'easeInOut' }} 
           className='static md:fixed left-0 bottom-0 z-0 flex flex-row md:flex-col items-center justify-center space-x-6 md:space-x-0 md:pl-12 text-blue text-md md:text-lg'
         >
-          <a href='https://github.com/AhsaniHasbi' target='_blank' ref='noopener noreferrer' className='inline-block mb-4'><GitHubIcon sx={{fontSize: 25}} /></a>
-          <a href='https://twitter.com/HasbiAhsani' target='_blank' ref='noopener noreferrer' className='inline-block mb-4'><TwitterIcon sx={{fontSize: 25}} /></a>
-          <a href='https://www.instagram.com/hasbi_ahsani' target='_blank' ref='noopener noreferrer' className='inline-block mb-4'><InstagramIcon sx={{fontSize: 25}} /></a>
-          <a href='https://www.linkedin.com/in/muhammad-hasbi-ahsani-aba53b246/' target='_blank' ref='noopener noreferrer' className='inline-block mb-4 md:mb-0'><LinkedInIcon sx={{fontSize: 25}} /></a>
-          <a href='mailto:hasbiahsani92@gmail.com' className='md:hidden inline-block mb-4'><EmailIcon sx={{fontSize: 25}} /></a>
+          <Link href='https://github.com/AhsaniHasbi' target='_blank' passHref>
+            <span className='inline-block mb-4'><GitHubIcon sx={{fontSize: 25}} /></span>
+          </Link>
+          <Link href='https://twitter.com/HasbiAhsani' target='_blank' passHref>
+            <span className='inline-block mb-4'><TwitterIcon sx={{fontSize: 25}} /></span>
+          </Link>
+          <Link href='https://www.instagram.com/hasbi_ahsani' target='_blank' passHref>
+            <span className='inline-block mb-4'><InstagramIcon sx={{fontSize: 25}} /></span>
+          </Link>
+          <Link href='https://www.linkedin.com/in/muhammad-hasbi-ahsani-aba53b246/' target='_blank' passHref>
+            <span className='inline-block mb-4'><LinkedInIcon sx={{fontSize: 25}} /></span>
+          </Link>
+
+          <Link href='mailto:hasbiahsani92@gmail.com' passHref>
+            <span className='md:hidden inline-block mb-4'><EmailIcon sx={{fontSize: 25}} /></span>
+          </Link>
+
           <div className='hidden md:block border-blue border-r-2 h-[14vh] mt-8'></div>
         </motion.div>
 
@@ -45,7 +58,9 @@ export default function Layout({ children } : PropsWithChildren) {
           transition={{ duration: 0.5, delay: 2, ease: 'easeInOut' }} 
           className='hidden w-0 fixed right-0 bottom-0 z-0 md:flex flex-col items-center justify-center pr-12 text-blue text-md md:text-lg'
         >
-          <a href='mailto:hasbiahsani92@gmail.com' className='rotate-90 w-max h-max pr-44 flex items-center'><EmailIcon sx={{fontSize: 25, marginRight: 1}} /> hasbiahsani92@gmail.com</a>
+          <Link href='mailto:hasbiahsani92@gmail.com' passHref>
+            <span className='rotate-90 w-max h-max pr-44 flex items-center'><EmailIcon sx={{fontSize: 25, marginRight: 1}} /> hasbiahsani92@gmail.com</span>
+          </Link>
           <div className='border-blue border-r-2 h-[14vh] mt-8'></div>
         </motion.div>
 

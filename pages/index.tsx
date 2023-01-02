@@ -4,6 +4,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import CloseIcon from '@mui/icons-material/Close';
+import Link from 'next/link';
 
 interface project {
   name: string,
@@ -119,15 +120,16 @@ export default function Home () {
               </motion.p>
 
             </div>
-            <motion.a 
-              href='mailto:hasbiahsani92@gmail.com'
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.4, ease: 'easeInOut' }}
-              className='inline-block px-8 py-4 text-teal border-2 border-teal'
-            >
-              Say Hello
-            </motion.a>
+            <Link href='mailto:hasbiahsani92@gmail.com' passHref>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.4, ease: 'easeInOut' }}
+                className='inline-block px-8 py-4 text-teal border-2 border-teal mt-12'
+              >
+                Say Hello
+              </motion.span>
+            </Link>
           </div>
         </div>
 
@@ -414,12 +416,14 @@ export default function Home () {
               <p>
                 Kotak masuk saya selalu terbuka. Apakah anda memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba yang terbaik untuk menghubungi anda !
               </p>
-              <a 
+              <Link 
                 href='mailto:hasbiahsani92@gmail.com'
-                className='inline-block px-8 py-4 text-teal border-2 border-teal'
+                passHref
               >
-                Say Hello
-              </a>
+                <span className='inline-block px-8 py-4 text-teal border-2 border-teal mt-12'>
+                  Say Hello
+                </span>
+              </Link>
             </div>
           </div>
           {/* content */}
