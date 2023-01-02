@@ -20,7 +20,7 @@ interface works {
   jobdesk: string[]
 }
 
-export default function Home() {
+export default function Home () {
   
   const [totalProjects, setTotalProjects] = useState(3);
   const [numbOfWork, setNumbOfWork] = useState(0);

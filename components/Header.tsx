@@ -71,22 +71,24 @@ export default function Header() {
           text-sm
         `}
       >
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, ease: 'easeOut' }}
-          className='relative font-extrabold text-2xl text-teal w-[50px] h-[50px]'
-        >
-          <Image 
-            alt='logo'
-            src='/iconHAS.png'
-            fill
-            style={{
-              objectFit: 'contain',
-              position: 'absolute'
-            }}
-          />
-        </motion.div>
+        <Link href={'#about'} passHref>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, ease: 'easeOut' }}
+            className='relative font-extrabold text-2xl text-teal w-[50px] h-[50px]'
+          >
+            <Image 
+              alt='logo'
+              src='/iconHAS.png'
+              fill
+              style={{
+                objectFit: 'contain',
+                position: 'absolute'
+              }}
+            />
+          </motion.div>
+        </Link>
 
         <nav className='relative'>
           <button 
